@@ -1,6 +1,20 @@
-import asyncio
 import os
+import asyncio
+from flask import Flask
+from threading import Thread
+
 asyncio.set_event_loop(asyncio.new_event_loop())
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Bot is running!"
+
+def run_web():
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
+
+Thread(target=run_web).start()
 import re
 import sys
 import m3u8

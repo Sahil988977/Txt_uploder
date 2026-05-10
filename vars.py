@@ -8,7 +8,7 @@ API_HASH = environ.get("API_HASH", "42dd26260037e457f0ff290a41cdbb1b")
 BOT_TOKEN = environ.get("BOT_TOKEN", "8635786355:AAFyh1laYA_f7yiXSUgbViFoYkEhnbhIot4")
 OWNER = int(environ.get("OWNER", "7068000043"))
 CREDIT = environ.get("CREDIT", "TXT 𝘽𝙊𝙏𝙎")
-AUTH_USER = os.environ.get('AUTH_USERS', '7068000043','1828775829').split(',')
+AUTH_USER = os.environ.get('AUTH_USERS', '7068000043,1828775829').split(',')
 AUTH_USERS = [int(user_id) for user_id in AUTH_USER]
 if int(OWNER) not in AUTH_USERS:
     AUTH_USERS.append(int(OWNER))
